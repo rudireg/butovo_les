@@ -18,7 +18,7 @@ body {
     color: #fff;
     height: 100vh;
     overflow: hidden;
-    z-index: 0;
+    z-index: 4;
     & h1 {
         font-size: 29px;
         font-weight: 900;
@@ -67,7 +67,7 @@ body {
     font-weight: 400;
     letter-spacing: 2px;
     user-select: none;
-    z-index: 2;
+    z-index: 1000;
     white-space: nowrap;
     @media screen and (min-width: 420px) {
         font-size: 36px;
@@ -153,6 +153,7 @@ body {
         }
     }
     & .burger {
+        z-index: 999;
         display: block;
         text-align: right;
         user-select: none;
@@ -204,6 +205,9 @@ footer {
     color: #fff;
     & .footer {
         padding: 30px;
+        @media screen and (max-width: 700px) {
+            padding-top: 0;
+        }
         & ul {
             position: relative;
             top: 116px;
@@ -354,6 +358,9 @@ footer {
         text-align: center;
         padding-top: 8vh;
         padding-bottom: 4vh;
+        @media screen and (max-width: 1024px) {
+            padding: 0;
+        }
     }
     & .history__block {
         display: grid;
@@ -460,6 +467,9 @@ footer {
         text-align: center;
         padding-top: 8vh;
         padding-bottom: 4vh;
+        @media screen and (max-width: 1024px) {
+            padding: 0;
+        }
     }
     & .capture__block {
         padding: 0 15px;
@@ -576,3 +586,20 @@ footer {
     }
 }
 
+.youtube-frame {
+    margin: 0 auto;
+    width: 100%;
+    height: 180px;
+    @media screen and (min-width: 420px) {
+        width:  420px;
+        height: 340px;
+    }
+    @media screen and (min-width: 700px) {
+        width: 640px;
+        height: 360px;
+    }
+    @media screen and (min-width: 1280px) {
+        width: 850px;
+        height: 480px;
+    }
+}
