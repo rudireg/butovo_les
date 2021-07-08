@@ -36,9 +36,64 @@
             <p class="text">На публичной карте отображены размежеванные земли</p>
         </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // создаём элемент <div>, который будем перемещать вместе с указателем мыши пользователя
+            let mapTitle = document.createElement('div');
+            mapTitle.className = 'mapTitle';
+            // вписываем нужный нам текст внутрь элемента
+            mapTitle.textContent = 'Для активации карты нажмите по ней';
+            // добавляем элемент с подсказкой последним элементов внутрь нашего <div> с id wrapMap
+            wrapMap.appendChild(mapTitle);
+            // по клику на карту
+            wrapMap.onclick = function() {
+                // убираем атрибут "style", в котором прописано свойство "pointer-events"
+                this.children[0].removeAttribute('style');
+                // удаляем элемент с интерактивной подсказкой
+                mapTitle.parentElement.removeChild(mapTitle);
+            }
+            // по движению мыши в области карты
+            wrapMap.onmousemove = function(event) {
+                // показываем подсказку
+                mapTitle.style.display = 'block';
+                // двигаем подсказку по области карты вместе с мышкой пользователя
+                if(event.offsetY > 10) mapTitle.style.top = event.offsetY + 20 + 'px';
+                if(event.offsetX > 10) mapTitle.style.left = event.offsetX + 20 + 'px';
+            }
+            // при уходе указателя мыши с области карты
+            wrapMap.onmouseleave = function() {
+                // прячем подсказку
+                mapTitle.style.display = 'none';
+            }
+        });
+    </script>
+    <style>
+        #wrapMap {
+            position: relative;
+            cursor: help;
+            overflow: hidden;
+            border-width: 1px;
+            border-style: solid;
+            border-color: rgb(204, 204, 204);
+            border-image: initial;
+        }
+        .mapTitle {
+            position: absolute;
+            z-index: 1000;
+            box-shadow: rgba(0, 0, 0, 0.25) 0 0 5px;
+            display: none;
+            padding: 5px 20px;
+            border-radius: 5px;
+            background: rgb(255, 255, 255);
+            border-width: 1px;
+            border-style: solid;
+            border-color: rgb(204, 204, 204);
+            border-image: initial;
+        }
+    </style>
     <div class="flex__block">
-        <div class="forest-map__cad">
-            <iframe id="iframe" src="https://egrp365.ru/map/?x=55.54912194174424&y=37.596307287822&zoom=15&layer=2&menu=0" allowfullscreen="" frameborder="0" width="100%" height="500"></iframe>
+        <div id="wrapMap" class="forest-map__cad">
+            <iframe style="pointer-events: none;" id="iframe" src="https://egrp365.ru/map/?x=55.54912194174424&y=37.596307287822&zoom=15&layer=2&menu=0" allowfullscreen="" frameborder="0" width="100%" height="500"></iframe>
         </div>
     </div>
 </section>
