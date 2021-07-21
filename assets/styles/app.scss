@@ -673,6 +673,12 @@ footer {
 }
 .join {
     padding-top: 120px;
+    & .join_banner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px;
+        align-items: center;
+    }
     & .join__text {
         color: #d03f2c;
         font-size: 48px;
@@ -680,5 +686,24 @@ footer {
     }
     & .join_go {
         max-width: 600px;
+    }
+}
+.button-enter {
+    width: auto;
+    display: inline-block;
+    padding: 15px 32px;
+    background-color: #d03f2c;
+    color: #fff;
+    font-size: 46px;
+    font-weight: 700;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: background-color .25s;
+    &:hover {
+        background-color: #A52D1EFF;
     }
 }
