@@ -671,3 +671,14 @@ footer {
         }
     }
 }
+.join {
+    padding-top: 120px;
+    & .join__text {
+        color: #d03f2c;
+        font-size: 48px;
+        font-weight: 700;
+    }
+    & .join_go {
+        max-width: 600px;
+    }
+}
