@@ -13,6 +13,7 @@ class AjaxFormHandler {
             if (submit) {
                 submit.addEventListener('click_action', e => {
                     e.preventDefault();
+                    ym(82513627,'reachGoal','join');
                     this.hideError(errorBlock);
                     let form = e.currentTarget.closest('form');
                     if (!form.checkValidity()) {
