@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "08de0631d96618ad900b08895732188d",
+    "content-hash": "364282b74d9d072a274287598ad51d1a",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -1585,6 +1585,58 @@
             "time": "2021-05-22T16:11:15+00:00"
         },
         {
+            "name": "google/recaptcha",
+            "version": "1.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/google/recaptcha.git",
+                "reference": "614f25a9038be4f3f2da7cbfd778dc5b357d2419"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/google/recaptcha/zipball/614f25a9038be4f3f2da7cbfd778dc5b357d2419",
+                "reference": "614f25a9038be4f3f2da7cbfd778dc5b357d2419",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.2.20|^2.15",
+                "php-coveralls/php-coveralls": "^2.1",
+                "phpunit/phpunit": "^4.8.36|^5.7.27|^6.59|^7.5.11"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ReCaptcha\\": "src/ReCaptcha"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Client library for reCAPTCHA, a free service that protects websites from spam and abuse.",
+            "homepage": "https://www.google.com/recaptcha/",
+            "keywords": [
+                "Abuse",
+                "captcha",
+                "recaptcha",
+                "spam"
+            ],
+            "support": {
+                "forum": "https://groups.google.com/forum/#!forum/recaptcha",
+                "issues": "https://github.com/google/recaptcha/issues",
+                "source": "https://github.com/google/recaptcha"
+            },
+            "time": "2020-03-31T17:50:54+00:00"
+        },
+        {
             "name": "laminas/laminas-code",
             "version": "4.4.0",
             "source": {
@@ -2231,6 +2283,81 @@
                 "source": "https://github.com/sensiolabs/SensioFrameworkExtraBundle/tree/v6.1.5"
             },
             "time": "2021-05-31T10:40:46+00:00"
+        },
+        {
+            "name": "swiftmailer/swiftmailer",
+            "version": "v6.2.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/swiftmailer/swiftmailer.git",
+                "reference": "15f7faf8508e04471f666633addacf54c0ab5933"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/15f7faf8508e04471f666633addacf54c0ab5933",
+                "reference": "15f7faf8508e04471f666633addacf54c0ab5933",
+                "shasum": ""
+            },
+            "require": {
+                "egulias/email-validator": "^2.0|^3.1",
+                "php": ">=7.0.0",
+                "symfony/polyfill-iconv": "^1.0",
+                "symfony/polyfill-intl-idn": "^1.10",
+                "symfony/polyfill-mbstring": "^1.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.0",
+                "symfony/phpunit-bridge": "^4.4|^5.0"
+            },
+            "suggest": {
+                "ext-intl": "Needed to support internationalized email addresses"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "6.2-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "lib/swift_required.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Chris Corbyn"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Swiftmailer, free feature-rich PHP mailer",
+            "homepage": "https://swiftmailer.symfony.com",
+            "keywords": [
+                "email",
+                "mail",
+                "mailer"
+            ],
+            "support": {
+                "issues": "https://github.com/swiftmailer/swiftmailer/issues",
+                "source": "https://github.com/swiftmailer/swiftmailer/tree/v6.2.7"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/swiftmailer/swiftmailer",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-03-09T12:30:35+00:00"
         },
         {
             "name": "symfony/asset",
@@ -3485,16 +3612,16 @@
         },
         {
             "name": "symfony/form",
-            "version": "v5.3.2",
+            "version": "v5.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/form.git",
-                "reference": "5179e4dacd4d0db7e20d00cb9c7b6b73344cdd51"
+                "reference": "bc075f4e2faa8c3f4d85c3ec6ef1e7d584a2e3cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/form/zipball/5179e4dacd4d0db7e20d00cb9c7b6b73344cdd51",
-                "reference": "5179e4dacd4d0db7e20d00cb9c7b6b73344cdd51",
+                "url": "https://api.github.com/repos/symfony/form/zipball/bc075f4e2faa8c3f4d85c3ec6ef1e7d584a2e3cb",
+                "reference": "bc075f4e2faa8c3f4d85c3ec6ef1e7d584a2e3cb",
                 "shasum": ""
             },
             "require": {
@@ -3567,7 +3694,7 @@
             "description": "Allows to easily create, process and reuse HTML forms",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/form/tree/v5.3.2"
+                "source": "https://github.com/symfony/form/tree/v5.3.3"
             },
             "funding": [
                 {
@@ -3583,7 +3710,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-06-03T13:39:28+00:00"
+            "time": "2021-06-27T12:34:06+00:00"
         },
         {
             "name": "symfony/framework-bundle",
@@ -6088,16 +6215,16 @@
         },
         {
             "name": "symfony/security-csrf",
-            "version": "v5.3.0",
+            "version": "v5.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/security-csrf.git",
-                "reference": "c7b7006d3ed955da978a002d764cae388bed8d09"
+                "reference": "20259eb80a981e0db134e51c18f558a9510c1c84"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/security-csrf/zipball/c7b7006d3ed955da978a002d764cae388bed8d09",
-                "reference": "c7b7006d3ed955da978a002d764cae388bed8d09",
+                "url": "https://api.github.com/repos/symfony/security-csrf/zipball/20259eb80a981e0db134e51c18f558a9510c1c84",
+                "reference": "20259eb80a981e0db134e51c18f558a9510c1c84",
                 "shasum": ""
             },
             "require": {
@@ -6139,7 +6266,7 @@
             "description": "Symfony Security Component - CSRF Library",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/security-csrf/tree/v5.3.0"
+                "source": "https://github.com/symfony/security-csrf/tree/v5.3.3"
             },
             "funding": [
                 {
@@ -6155,7 +6282,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-05-26T17:43:10+00:00"
+            "time": "2021-06-29T05:59:20+00:00"
         },
         {
             "name": "symfony/security-guard",
@@ -6636,6 +6763,86 @@
             "time": "2021-06-06T09:51:56+00:00"
         },
         {
+            "name": "symfony/swiftmailer-bundle",
+            "version": "v3.5.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/swiftmailer-bundle.git",
+                "reference": "6b72355549f02823a2209180f9c035e46ca3f178"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/swiftmailer-bundle/zipball/6b72355549f02823a2209180f9c035e46ca3f178",
+                "reference": "6b72355549f02823a2209180f9c035e46ca3f178",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1",
+                "swiftmailer/swiftmailer": "^6.1.3",
+                "symfony/config": "^4.4|^5.0",
+                "symfony/dependency-injection": "^4.4|^5.0",
+                "symfony/http-kernel": "^4.4|^5.0"
+            },
+            "conflict": {
+                "twig/twig": "<1.41|>=2.0,<2.10"
+            },
+            "require-dev": {
+                "symfony/console": "^4.4|^5.0",
+                "symfony/framework-bundle": "^4.4|^5.0",
+                "symfony/phpunit-bridge": "^4.4|^5.0",
+                "symfony/yaml": "^4.4|^5.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "3.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Bundle\\SwiftmailerBundle\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony SwiftmailerBundle",
+            "homepage": "http://symfony.com",
+            "support": {
+                "issues": "https://github.com/symfony/swiftmailer-bundle/issues",
+                "source": "https://github.com/symfony/swiftmailer-bundle/tree/v3.5.2"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-01-25T17:31:39+00:00"
+        },
+        {
             "name": "symfony/translation",
             "version": "v5.3.2",
             "source": {
@@ -7018,16 +7225,16 @@
         },
         {
             "name": "symfony/validator",
-            "version": "v5.3.2",
+            "version": "v5.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/validator.git",
-                "reference": "87621b2503601673b7e76aeffac3234ada8e1bf2"
+                "reference": "82d4a64927d6ec5d37277ae1d9f5d24b31dd390c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/validator/zipball/87621b2503601673b7e76aeffac3234ada8e1bf2",
-                "reference": "87621b2503601673b7e76aeffac3234ada8e1bf2",
+                "url": "https://api.github.com/repos/symfony/validator/zipball/82d4a64927d6ec5d37277ae1d9f5d24b31dd390c",
+                "reference": "82d4a64927d6ec5d37277ae1d9f5d24b31dd390c",
                 "shasum": ""
             },
             "require": {
@@ -7108,7 +7315,7 @@
             "description": "Provides tools to validate values",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/validator/tree/v5.3.2"
+                "source": "https://github.com/symfony/validator/tree/v5.3.3"
             },
             "funding": [
                 {
@@ -7124,7 +7331,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-06-17T12:34:27+00:00"
+            "time": "2021-06-30T07:27:52+00:00"
         },
         {
             "name": "symfony/var-dumper",
@@ -10007,7 +10214,8 @@
     "platform": {
         "php": ">=7.2.5",
         "ext-ctype": "*",
-        "ext-iconv": "*"
+        "ext-iconv": "*",
+        "ext-json": "*"
     },
     "platform-dev": [],
     "plugin-api-version": "2.0.0"

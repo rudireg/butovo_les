@@ -5,15 +5,21 @@
  * (and its CSS file) in your base layout (base.html.twig).
  */
 
+require('./js/google_recaptcha/captcha.js');
+
 // any CSS you import will output into a single css file (app.css in this case)
 import './styles/app.scss';
 
 // start the Stimulus application
 import './bootstrap';
 import MenuHandler from "./menu";
+import PopupFormHandler from "./js/popup_form_handler";
+import AjaxFormHandler from "./js/ajax_form_handler";
 
 document.addEventListener('DOMContentLoaded', () => {
     new MenuHandler();
+    let popupFormHandler = new PopupFormHandler();
+    new AjaxFormHandler(popupFormHandler);
 
     let screenHeight = document.documentElement.clientHeight;
     let prevScrollPos = window.pageYOffset;
@@ -35,5 +41,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         prevScrollPos = currentScrollPos;
+    }
+
+    // Показать окно вступления в активисты
+    let btnGo = document.querySelector('[data-action="go"]');
+    if (btnGo) {
+        btnGo.addEventListener('click', e => {
+            popupFormHandler.show('[data-popup="go"]');
+        });
     }
 });
