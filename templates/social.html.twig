@@ -23,7 +23,7 @@
 <section class="social__customer">
     <div class="social">
         <h3 class="h3 text-center">Контакты для активистов</h3>
-        <p class="text text-center mb-2">Если вы хотите принять участие в защите леса, с радсстью примем Вас в наши ряды.</p>
+        <p class="text text-center mb-2">Если вы хотите принять участие в защите леса, с радостью примем Вас в наши ряды.</p>
         <div class="customer__blocks">
             <a rel="nofollow" class="social__block" target="_blank" href="https://t.me/forest_butovo">
                 <img src="{{ asset('icons/telegram.svg') }}" alt="telegram">
@@ -48,7 +48,7 @@
             </a>
         </div>
         <div class="join">
-            <p class="join__text text-center">{{ 'Вступайте в ряды активистов'|upper }}</p>
+            <p class="join__text text-center">{{ 'Вступай в ряды активистов'|upper }}</p>
             <div class="join_banner">
                 <div class="join_go">
                     <img class="responsive-img" src="{{ asset('images/go.png') }}" alt="защитите Бутовский лес">
@@ -59,6 +59,23 @@
                 </div>
             </div>
         </div>
+
+        <div class="people-block">
+            <h3 class="text-center h3 mb-3">Знакомтесь. Активисты на борьбе против вырубки Бутовского Леса</h3>
+            <div class="people-video">
+                <video controls width="100%" height="100%">
+                    <source src="{{ asset('images/people/people_video.mp4') }}" type="video/mp4">
+                </video>
+            </div>
+            <div class="people-slider">
+                <div data-people-slider>
+                    <div class="people-slider__item"><img class="responsive-img" src="{{ asset('images/people/1.jpg') }}" alt=""></div>
+                    <div class="people-slider__item"><img class="responsive-img" src="{{ asset('images/people/2.jpg') }}" alt=""></div>
+                    <div class="people-slider__item"><img class="responsive-img" src="{{ asset('images/people/3.jpg') }}" alt=""></div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </section>
 
@@ -83,7 +100,6 @@
             </span>
         </div>
     </div>
-
     <div data-popup="go-thanks" class="b-popup-content is-hidden">
         <div class="text mb-1 text-center">Благодарим за участие.</div>
         <img data-close class="b-popup-close" src="{{ asset('icons/close.svg') }}" alt="close">

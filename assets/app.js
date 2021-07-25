@@ -9,12 +9,15 @@ require('./js/google_recaptcha/captcha.js');
 
 // any CSS you import will output into a single css file (app.css in this case)
 import './styles/app.scss';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 // start the Stimulus application
 import './bootstrap';
 import MenuHandler from "./menu";
 import PopupFormHandler from "./js/popup_form_handler";
 import AjaxFormHandler from "./js/ajax_form_handler";
+import 'slick-carousel';
 
 document.addEventListener('DOMContentLoaded', () => {
     new MenuHandler();
@@ -50,4 +53,20 @@ document.addEventListener('DOMContentLoaded', () => {
             popupFormHandler.show('[data-popup="go"]');
         });
     }
+
+    // Slick slider
+    $('[data-people-slider]').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear',
+        respondTo: 'slider'
+        // adaptiveHeight: true
+    });
+
+    // $('[data-]').slick({
+    //     rtl: true
+    // });
+
 });
